@@ -52,6 +52,10 @@ class HBNBCommand(cmd.Cmd):
         " Quit command to exit the program"
         return True
 
+    def emptyline(self):
+        """porints empty line when press enter button witempty line"""
+        pass
+
     def do_create(self, arg):
         """Create a new instance of BaseModel, saves it, and prints the id."""
         if not arg:

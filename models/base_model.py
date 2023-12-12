@@ -6,10 +6,11 @@ from datetime import datetime
 class BaseModel:
     def __init__(self, *args, **kwargs):
         if kwargs:
+            dteform = "%Y-%m-%dT%H:%M:%S.%f"
             for key, value in kwargs.items():
                 if key != '__class__':
                     if key in ['updated_at', 'created_at']:
-                        setattr(self, key, datetime.strptime(value,                                       "%Y-%m-%dT%H:%M:%S.%f"))
+                        setattr(self, key, datetime.strptime(value, dteform))
                     else:
                         setattr(self, key, value)
         else:

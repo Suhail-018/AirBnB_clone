@@ -1,4 +1,4 @@
-"""Testing the `base_model` module."""
+#!/usr/bin/python3
 import json
 import os
 import time
@@ -7,7 +7,7 @@ import uuid
 from datetime import datetime
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
-
+"""Testing the `base_model` module."""
 
 class TestBase(unittest.TestCase):
     """Test cases for the `Base` class.
